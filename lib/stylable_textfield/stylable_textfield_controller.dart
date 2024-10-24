@@ -6,6 +6,7 @@ export './models.dart';
 class StyleableTextFieldController extends TextEditingController {
   StyleableTextFieldController({
     required this.styles,
+    super.text,
   }) : combinedPattern = styles.createCombinedPatternBasedOnStyleMap();
 
   final TextPartStyleDefinitions styles;
@@ -64,5 +65,4 @@ class StyleableTextFieldController extends TextEditingController {
       ),
     );
   }
-
 }

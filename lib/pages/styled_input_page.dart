@@ -8,19 +8,22 @@ class StyledInputPage extends StatelessWidget {
   Widget build(BuildContext context) {
     final TextEditingController textEditingController =
         StyleableTextFieldController(
+          text: 'Try to write italic or bold words here!',
       styles: TextPartStyleDefinitions(
         definitionList: <TextPartStyleDefinition>[
           TextPartStyleDefinition(
-            pattern: '[\.,\?\!]',
+            pattern: 'bold', // '[\.,\?\!]',
             style: const TextStyle(
+              color: Colors.green,
               fontWeight: FontWeight.bold,
             ),
           ),
           TextPartStyleDefinition(
             style: const TextStyle(
               color: Colors.blue,
+              fontStyle: FontStyle.italic,
             ),
-            pattern: '(?:(the|a|an) +)',
+            pattern: 'italic', // '(?:(the|a|an) +)',
           ),
         ],
       ),
@@ -28,12 +31,11 @@ class StyledInputPage extends StatelessWidget {
 
     return Column(
       children: [
-        Text('Enter the/a/an/!/?'),
-        TextField(
+        TextFormField(
           controller: textEditingController,
           decoration: const InputDecoration(
             border: OutlineInputBorder(),
-            hintText: 'Enter your text here...',
+            // hintText: 'Enter your text here...',
           ),
           autocorrect: false,
           enableSuggestions: false,

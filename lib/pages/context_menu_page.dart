@@ -9,7 +9,7 @@ class ContextMenuPage extends StatefulWidget {
 }
 
 class _ContextMenuPageState extends State<ContextMenuPage> {
-  final TextEditingController _controller = TextEditingController();
+  final TextEditingController _controller = TextEditingController(text: 'Select this text!');
   final FocusNode _focusNode = FocusNode();
   TextSelection? _selection;
 

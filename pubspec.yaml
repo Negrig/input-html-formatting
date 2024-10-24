@@ -36,6 +36,9 @@ dependencies:
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.8
   logger: ^2.4.0
+  light_html_editor: ^0.4.4
+#  quill_html_editor: ^2.2.8
+  html_editor_plus: ^0.0.5
 
 dev_dependencies:
   flutter_test:
